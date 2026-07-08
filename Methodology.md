@@ -35,8 +35,8 @@ Every instruction completes its entire lifecycle within a single clock cycle, fl
 4. **Memory Access:** For LW and SW instructions, the datapath interacts directly with the Data Memory block.
 5. **Write Back:** A multiplexer routes either the ALU computation or the retrieved memory data permanently back into the destination register.
 
-*(Insert your custom high-tech datapath diagram here by replacing this text and the link below)*
-`![Datapath Diagram](link-to-image.png)`
+
+`![RV32I Datapath Diagram](RV32I single-cycle processor datapath.png)`
 
 ---
 
