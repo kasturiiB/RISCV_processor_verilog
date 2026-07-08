@@ -1,5 +1,3 @@
----
-
 ## Hardware and Software Tools
 
 The physical implementation and simulation of this processor relied on a robust stack of development tools:
@@ -70,5 +68,4 @@ The processor proves its autonomy via a dual-state Von Neumann memory layout:
 * **The Bootloader Sequence:** Upon reset, the CPU runs an isolated assembly algorithm using dedicated registers (`x20`-`x25`) to calculate the Fibonacci sequence and populate the data memory.
 * **The Application Loop:** Once the boot sequence is complete, the processor executes an absolute jump (`JALR`), gracefully dropping into an infinite Memory-Mapped I/O polling loop to operate as an interactive calculator.
 
-*(Insert your beautifully formatted Vivado waveform screenshots here proving the calculations)*
-`![Waveform Proof](link-to-image.png)`
+
