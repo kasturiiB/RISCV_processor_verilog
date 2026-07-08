@@ -105,3 +105,14 @@ Here is a quick guide to the variables shown on the left side of the simulation 
 
 *   **The Data:** The CPU evaluates `operand_A` = `00000005` (5), `operator_char` = `3d` (ASCII for `=`), and `operand_B` = `00000005` (5). The output `result` is `00000001`.
 *   **Explanation:** The processor is evaluating the equation 5 = 5. Because the base RISC-V ISA does not include a dedicated "Set Equal To" hardware instruction, software handles this by instructing the Arithmetic Logic Unit (ALU) to subtract the two operands. The `ALU_result` shows exactly `00000000`, which proves the hardware correctly calculated 5 - 5 = 0. The software will detect this zero and branch to output a 1 (True).
+
+---
+
+  ### Hardware Terminal Interface (UART Communication)
+
+![RISC-V Interactive Silicon Calculator](<images/result in powershell after board connection.png>)
+
+*   **What it shows:** The Windows PowerShell terminal acting as the physical user interface between the host PC and the target FPGA board.
+*   **The Connection:** The system successfully establishes a hardware pipeline via a UART serial connection on `COM3`, operating at a `115200` baud rate. It prompts the user to initialize the sequence via a physical hardware interrupt (BTN0).
+*   **The Action:** The terminal demonstrates real-time asynchronous communication. The user inputs raw mathematical equations (`3+5`, `2-6`, `7*5`), and the physical RISC-V processor instantly computes and returns the correct results (`8`, `-4`, `35`). 
+*   **Takeaway:** This serves as the ultimate real-world proof of concept. It verifies that the processor's internal datapath, ALU, and custom UART MMIO modules all work together flawlessly on physical silicon to create a fully functional, interactive hardware calculator.
