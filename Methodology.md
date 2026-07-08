@@ -36,7 +36,7 @@ Every instruction completes its entire lifecycle within a single clock cycle, fl
 5. **Write Back:** A multiplexer routes either the ALU computation or the retrieved memory data permanently back into the destination register.
 
 
-`![RV32I Datapath Diagram](RV32I single-cycle processor datapath.png)`
+![RV32I Datapath Diagram](images/RV32I single-cycle processor datapath.png)
 
 ---
 
